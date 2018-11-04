@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C0C86019218F286D001CD54E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C86018218F286D001CD54E /* main.swift */; };
+		C0C86020218F28B1001CD54E /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C8601F218F28B1001CD54E /* CPU.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		C0C86015218F286D001CD54E /* VirtualCHIP-8 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "VirtualCHIP-8"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C86018218F286D001CD54E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C0C8601F218F28B1001CD54E /* CPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPU.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				C0C86018218F286D001CD54E /* main.swift */,
+				C0C8601F218F28B1001CD54E /* CPU.swift */,
 			);
 			path = "VirtualCHIP-8";
 			sourceTree = "<group>";
@@ -119,6 +122,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C86020218F28B1001CD54E /* CPU.swift in Sources */,
 				C0C86019218F286D001CD54E /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
