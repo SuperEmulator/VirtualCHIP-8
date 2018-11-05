@@ -12,6 +12,8 @@ class CPU: NSObject {
 
     let MemorySize = 4096
     let RegistersSize = 16
+    let RowsOfGraphics = 64
+    let colsOfGraphics = 32
     
     /// Chip-8 has 35 opcodes
     var currentOpcode: CUnsignedInt
@@ -30,6 +32,20 @@ class CPU: NSObject {
     
     /// There is an Index register I and a program counter which can have a value from 0x000 to OxFFF
     var programCounter: CUnsignedInt
+    
+    /// The graphics of Chip-8 are black and white and the screen has 2048 pixels (64*32)
+    var graphicsMatrix: [[CInt]]
+    
+    /// Chip-8 has two timer registers that count at 60hz
+    var delayTimer: CInt
+    var soundTimer: CInt
+    
+    /// when Chip-8 instruction set has opcodes that allow the program to jump to a certain address or call a subroutine, you need to implement one as part of the interpreter yourself. The system has 16 levels of stack and in order to remember which level of the stack is used, implement a stack pointer
+    var stack: [CInt]
+    var stackPoint: CInt
+    
+    /// Chip-8 has a HEX based keypad (0x0-0xF)
+    var keypad: [CInt]
     
     override init() {
         
