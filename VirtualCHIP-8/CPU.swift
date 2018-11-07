@@ -13,7 +13,9 @@ class CPU: NSObject {
     let MemorySize = 4096
     let RegistersSize = 16
     let RowsOfGraphics = 64
-    let colsOfGraphics = 32
+    let ColsOfGraphics = 32
+    let StackSize = 16
+    let KeypadSize = 16
     
     /// Chip-8 has 35 opcodes
     var currentOpcode: CUnsignedInt
@@ -48,7 +50,18 @@ class CPU: NSObject {
     var keypad: [CInt]
     
     override init() {
-        
+        currentOpcode = 0
+        memory = Array(repeatElement(0, count: MemorySize))
+        registers = Array(repeatElement(0, count: RegistersSize))
+        registerI = 0
+        // The system expects the application to be loaded at memory location 0x200
+        programCounter = 0x200
+        graphicsMatrix = Array(repeatElement(Array(repeatElement(0, count: ColsOfGraphics)), count: RowsOfGraphics))
+        delayTimer = 0
+        soundTimer = 0
+        stack = Array(repeatElement(0, count: StackSize))
+        stackPoint = 0
+        keypad = Array(repeatElement(0, count: KeypadSize))
     }
     
 }
